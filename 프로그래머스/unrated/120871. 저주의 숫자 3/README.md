@@ -1,6 +1,6 @@
-# [level unrated] 저주의 숫자 3 - 120871 
+# [level unrated] 저주의 숫자 3 - 120871
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120871) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120871)
 
 ### 성능 요약
 
@@ -106,5 +106,16 @@
 <li>40을 3x 마을의 숫자로 변환하면 76입니다.</li>
 </ul>
 
+#### 회고
+
+        1. for 문을 넣을 때 조건을 잘 생각해서 넣기.
+        let i = 1; ; i++와 let i = 1; i <= n; i++ 의 차이를 잘 생각하기
+        처음에는 let i = 1; i <= n; i++ 이러한 조건을 넣었을 때 중간에 몇번 통과되다가 실패가 뜨기에 검색을 해봤더니 반복문의 종료차이라고 나왔다.
+        이미 밑에서 count의 종료문을 작성했었기 때문에 종료문이 2중으로 적용되면서 오류가 생긴 듯하다.
+        다음부터는 위에 종료문을 넣어서 좀 더 간결한 코드를 목표로 작성하는 걸로.
+        2. .includes('3')에 관한 부분
+        includes는 배열이나 문자열에 적용되는 메소드이기 때문에 처음에 Number.includes(3)이라는 말도 안되는 식을 짠듯하다.
+        String.includes('3')으로 수정하니 오류가 없이 잘 됐다.
+        메소드에 관한 주의점을 어느정도 알아두기!!
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
